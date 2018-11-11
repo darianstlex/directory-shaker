@@ -1,10 +1,5 @@
 "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -21,7 +16,7 @@ const esm = require('esm')(module);
 
 const fs = require('fs');
 
-const getTreeObj = function getTreeObj(path) {
+module.exports = function (path) {
   let _ref = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {},
       _ref$recursive = _ref.recursive,
       recursive = _ref$recursive === void 0 ? true : _ref$recursive,
@@ -75,6 +70,3 @@ const getTreeObj = function getTreeObj(path) {
     tree
   }, extra);
 };
-
-var _default = getTreeObj;
-exports.default = _default;

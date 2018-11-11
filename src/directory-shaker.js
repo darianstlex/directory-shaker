@@ -1,7 +1,7 @@
 const esm = require('esm')(module);
 const fs = require('fs');
 
-const getTreeObj = (path, {
+module.exports = (path, {
   recursive = true,
   spreadIndex = true,
   pattern = /^.*\.js$/,
@@ -39,5 +39,3 @@ const getTreeObj = (path, {
 
   return { tree, ...extra };
 };
-
-export default getTreeObj;

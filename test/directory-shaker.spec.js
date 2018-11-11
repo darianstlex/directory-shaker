@@ -1,5 +1,5 @@
 const path = require('path');
-import getTreeObj from '../src/directory-shaker';
+const getTreeObj = require('../src/directory-shaker');
 
 const store = path.resolve(__dirname, 'store');
 
