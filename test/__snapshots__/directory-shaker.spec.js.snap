@@ -1,0 +1,238 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Directory Shaker should return correct tree and extra data 1`] = `
+Object {
+  "paths": Object {
+    "aboutPage": Object {
+      "name": "aboutPage",
+      "page": "About Us",
+      "path": "/about",
+    },
+    "batteryAA": Object {
+      "name": "batteryAA",
+      "page": "Battery AA",
+      "path": "/products/battery",
+    },
+    "droneSuper": Object {
+      "name": "droneSuper",
+      "page": "Drone Super",
+      "path": "/products/drone",
+    },
+    "storeRoot": Object {
+      "name": "storeRoot",
+      "page": "Root Page",
+      "path": "/",
+    },
+  },
+  "tree": Object {
+    "about": Object {
+      "name": "aboutPage",
+      "page": "About Us",
+      "path": "/about",
+    },
+    "name": "storeRoot",
+    "page": "Root Page",
+    "path": "/",
+    "products": Object {
+      "battery": Object {
+        "header_color": "some color",
+        "header_name": "some name",
+        "header_text": "some text",
+        "name": "batteryAA",
+        "page": "Battery AA",
+        "path": "/products/battery",
+      },
+      "drone": Object {
+        "getPrice": [Function],
+        "header_color": "some color",
+        "header_name": "some name",
+        "header_text": "some text",
+        "name": "droneSuper",
+        "page": "Drone Super",
+        "path": "/products/drone",
+      },
+    },
+  },
+}
+`;
+
+exports[`Directory Shaker should return correct tree and more extra data 1`] = `
+Object {
+  "pages": Object {
+    "aboutPage": "/about",
+    "batteryAA": "/products/battery",
+    "droneSuper": "/products/drone",
+    "storeRoot": "/",
+  },
+  "paths": Object {
+    "aboutPage": Object {
+      "name": "aboutPage",
+      "page": "About Us",
+      "path": "/about",
+    },
+    "batteryAA": Object {
+      "name": "batteryAA",
+      "page": "Battery AA",
+      "path": "/products/battery",
+    },
+    "droneSuper": Object {
+      "name": "droneSuper",
+      "page": "Drone Super",
+      "path": "/products/drone",
+    },
+    "storeRoot": Object {
+      "name": "storeRoot",
+      "page": "Root Page",
+      "path": "/",
+    },
+  },
+  "tree": Object {
+    "about": Object {
+      "name": "aboutPage",
+      "page": "About Us",
+      "path": "/about",
+    },
+    "name": "storeRoot",
+    "page": "Root Page",
+    "path": "/",
+    "products": Object {
+      "battery": Object {
+        "header_color": "some color",
+        "header_name": "some name",
+        "header_text": "some text",
+        "name": "batteryAA",
+        "page": "Battery AA",
+        "path": "/products/battery",
+      },
+      "drone": Object {
+        "getPrice": [Function],
+        "header_color": "some color",
+        "header_name": "some name",
+        "header_text": "some text",
+        "name": "droneSuper",
+        "page": "Drone Super",
+        "path": "/products/drone",
+      },
+    },
+  },
+}
+`;
+
+exports[`Directory Shaker should return correct tree by default 1`] = `
+Object {
+  "tree": Object {
+    "about": Object {
+      "name": "aboutPage",
+      "page": "About Us",
+      "path": "/about",
+    },
+    "name": "storeRoot",
+    "page": "Root Page",
+    "path": "/",
+    "products": Object {
+      "battery": Object {
+        "header_color": "some color",
+        "header_name": "some name",
+        "header_text": "some text",
+        "name": "batteryAA",
+        "page": "Battery AA",
+        "path": "/products/battery",
+      },
+      "drone": Object {
+        "getPrice": [Function],
+        "header_color": "some color",
+        "header_name": "some name",
+        "header_text": "some text",
+        "name": "droneSuper",
+        "page": "Drone Super",
+        "path": "/products/drone",
+      },
+      "header": Object {
+        "header_color": "some color",
+        "header_name": "some name",
+        "header_text": "some text",
+      },
+    },
+  },
+}
+`;
+
+exports[`Directory Shaker should return correct tree if index not spreaded 1`] = `
+Object {
+  "tree": Object {
+    "about": Object {
+      "name": "aboutPage",
+      "page": "About Us",
+      "path": "/about",
+    },
+    "index": Object {
+      "name": "storeRoot",
+      "page": "Root Page",
+      "path": "/",
+    },
+  },
+}
+`;
+
+exports[`Directory Shaker should return correct tree if not recursive 1`] = `
+Object {
+  "tree": Object {
+    "about": Object {
+      "name": "aboutPage",
+      "page": "About Us",
+      "path": "/about",
+    },
+    "name": "storeRoot",
+    "page": "Root Page",
+    "path": "/",
+  },
+}
+`;
+
+exports[`Directory Shaker should return correct tree on filter 1`] = `
+Object {
+  "tree": Object {
+    "about": Object {
+      "name": "aboutPage",
+      "page": "About Us",
+      "path": "/about",
+    },
+    "name": "storeRoot",
+    "page": "Root Page",
+    "path": "/",
+    "products": Object {
+      "battery": Object {
+        "header_color": "some color",
+        "header_name": "some name",
+        "header_text": "some text",
+        "name": "batteryAA",
+        "page": "Battery AA",
+        "path": "/products/battery",
+      },
+      "drone": Object {
+        "getPrice": [Function],
+        "header_color": "some color",
+        "header_name": "some name",
+        "header_text": "some text",
+        "name": "droneSuper",
+        "page": "Drone Super",
+        "path": "/products/drone",
+      },
+    },
+  },
+}
+`;
+
+exports[`Directory Shaker should return correct tree on provided pattern 1`] = `
+Object {
+  "tree": Object {
+    "products": Object {
+      "new": Object {
+        "name": "newProduct",
+        "page": "New Product",
+        "path": "products/new",
+      },
+    },
+  },
+}
+`;
