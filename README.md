@@ -27,6 +27,8 @@ const { tree, parserName1, parserName2 } = getTreeObj(folder, {
 
 .........
 ```
+Check test folder for more examples
+
 ### Arguments
 
 - **`path: string:`** path to the root folder to start with 
@@ -36,9 +38,9 @@ const { tree, parserName1, parserName2 } = getTreeObj(folder, {
 ### Options
 
 - **`recursive: boolean: true`** deep object construction
-- **`spreadIndex: boolean: true`** assign index props to root or in separate node
+- **`spreadIndex: boolean: true`** assign index props to the root or in 'index' node
 - **`pattern: RegExp: /^.*\.js$/`** file pattern to be included in the tree
-- **`filter: function: true`** filer files to be included in the tree
+- **`filter: function:`** filter files to be included in the tree
 
 ### Parser
 
