@@ -16,7 +16,7 @@ const esm = require('esm')(module);
 
 const fs = require('fs');
 
-module.exports = function (path) {
+module.exports = function (root) {
   let _ref = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {},
       _ref$recursive = _ref.recursive,
       recursive = _ref$recursive === void 0 ? true : _ref$recursive,
@@ -37,35 +37,43 @@ module.exports = function (path) {
   }), {});
 
   const dirToObj = (path, obj) => {
-    fs.readdirSync(path).map(name => {
-      const target = `${path}/${name}`;
+    fs.readdirSync(path).map(file => {
+      const target = `${path}/${file}`;
       const node = fs.statSync(target);
 
       if (node.isFile()) {
-        if (!pattern.test(name)) return;
+        if (!pattern.test(file)) return;
 
-        const _name$match = name.match(/^(.+)\.[^.]{2,4}$/),
-              _name$match2 = _slicedToArray(_name$match, 2),
-              fileName = _name$match2[1];
+        const _file$match = file.match(/^(.+)\.[^.]{2,4}$/),
+              _file$match2 = _slicedToArray(_file$match, 2),
+              fileName = _file$match2[1];
 
         const module = esm(target);
         const data = module.default || module;
         if (!filter(data)) return;
+
+        const _path$match = path.match(new RegExp(`${root}(.*)`)),
+              _path$match2 = _slicedToArray(_path$match, 2),
+              clearPath = _path$match2[1];
+
         parsers.map((_ref2) => {
           let name = _ref2.name,
               map = _ref2.map,
               key = _ref2.key;
-          return extra[name][data[key]] = map(data);
+          return extra[name][data[key]] = map(data, {
+            path: clearPath || '/',
+            file
+          });
         });
         if (spreadIndex && fileName === 'index') obj = Object.assign(obj, data);else obj[fileName] = data;
       } else if (recursive && node.isDirectory()) {
-        obj[name] = {};
-        dirToObj(target, obj[name]);
+        obj[file] = {};
+        dirToObj(target, obj[file]);
       }
     });
   };
 
-  dirToObj(path, tree);
+  dirToObj(root, tree);
   return _objectSpread({
     tree
   }, extra);
