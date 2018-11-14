@@ -66,21 +66,37 @@ Object {
   },
   "paths": Object {
     "aboutPage": Object {
+      "meta": Object {
+        "file": "about.js",
+        "path": "/",
+      },
       "name": "aboutPage",
       "page": "About Us",
       "path": "/about",
     },
     "batteryAA": Object {
+      "meta": Object {
+        "file": "battery.js",
+        "path": "/products",
+      },
       "name": "batteryAA",
       "page": "Battery AA",
       "path": "/products/battery",
     },
     "droneSuper": Object {
+      "meta": Object {
+        "file": "drone.js",
+        "path": "/products",
+      },
       "name": "droneSuper",
       "page": "Drone Super",
       "path": "/products/drone",
     },
     "storeRoot": Object {
+      "meta": Object {
+        "file": "index.js",
+        "path": "/",
+      },
       "name": "storeRoot",
       "page": "Root Page",
       "path": "/",

@@ -1,6 +1,6 @@
 {
   "name": "directory-shaker",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Convert JS files structure to object, extract data",
   "main": "dist/directory-shaker.js",
   "scripts": {

@@ -43,7 +43,7 @@ describe('Directory Shaker', () => {
     }, {
       name: 'paths',
       key: 'name',
-      map: ({ path, name, page }) => ({ path, name, page }),
+      map: ({ path, name, page }, meta) => ({ path, name, page, meta }),
     }, {
       name: 'pages',
       key: 'name',
