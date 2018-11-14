@@ -27,7 +27,7 @@ module.exports = (root, {
 
         parsers.map(({ name, map, key }) => extra[name][data[key]] = map(data, {
           path: clearPath || '/',
-          file,
+          name: fileName,
         }));
 
         if (spreadIndex && fileName === 'index') obj = Object.assign(obj, data);
