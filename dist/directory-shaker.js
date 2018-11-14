@@ -62,7 +62,7 @@ module.exports = function (root) {
               key = _ref2.key;
           return extra[name][data[key]] = map(data, {
             path: clearPath || '/',
-            file
+            name: fileName
           });
         });
         if (spreadIndex && fileName === 'index') obj = Object.assign(obj, data);else obj[fileName] = data;
